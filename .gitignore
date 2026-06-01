@@ -1,0 +1,8 @@
+# Build output
+dns-healthcheck
+dns-healthcheck-linux-amd64
+dns-healthcheck-linux-arm64
+
+# Go toolchain
+*.test
+*.out
