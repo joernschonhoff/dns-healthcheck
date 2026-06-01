@@ -1,0 +1,20 @@
+services:
+  bind9:
+    build: .
+    container_name: bind9-example
+    ports:
+      - "15353:53/udp"
+      - "15353:53/tcp"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - /usr/bin/dns-healthcheck
+        - --check-udp
+        - --check-tcp
+        - --name
+        - health.example.internal
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
