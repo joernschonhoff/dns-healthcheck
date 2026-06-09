@@ -1,0 +1,45 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "automerge": false,
+  "prCreation": "auto",
+  "prConcurrentLimit": 2,
+  "semanticCommits": true,
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps",
+  "commitMessageAction": "update",
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "docker": {
+    "enabled": true,
+    "minor": {
+      "enabled": true
+    },
+    "patch": {
+      "enabled": true
+    },
+    "digest": {
+      "enabled": false
+    }
+  },
+  "dockerfile": true,
+  "gitlabci": true,
+  "gomod": {
+    "enabled": true
+  },
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "labels": [
+      "security",
+      "renovate"
+    ],
+    "assignees": []
+  },
+  "ignoreDeps": [],
+  "ignoreTests": false,
+  "postUpdateOptions": [
+    "gomodTidy"
+  ]
+}
