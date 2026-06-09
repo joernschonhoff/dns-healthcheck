@@ -4,7 +4,6 @@
     "config:recommended"
   ],
   "automerge": false,
-  "prCreation": "auto",
   "prConcurrentLimit": 2,
   "semanticCommits": true,
   "semanticCommitType": "chore",
@@ -12,23 +11,13 @@
   "commitMessageAction": "update",
   "commitMessageTopic": "{{depName}}",
   "commitMessageExtra": "to {{newVersion}}",
-  "docker": {
-    "enabled": true,
-    "minor": {
-      "enabled": true
-    },
-    "patch": {
-      "enabled": true
-    },
-    "digest": {
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["digest"],
       "enabled": false
     }
-  },
-  "dockerfile": true,
-  "gitlabci": true,
-  "gomod": {
-    "enabled": true
-  },
+  ],
   "vulnerabilityAlerts": {
     "enabled": true,
     "labels": [
@@ -37,8 +26,6 @@
     ],
     "assignees": []
   },
-  "ignoreDeps": [],
-  "ignoreTests": false,
   "postUpdateOptions": [
     "gomodTidy"
   ]
