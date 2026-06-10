@@ -5,7 +5,7 @@
   ],
   "automerge": false,
   "prConcurrentLimit": 2,
-  "semanticCommits": true,
+  "semanticCommits": "enabled",
   "semanticCommitType": "chore",
   "semanticCommitScope": "deps",
   "commitMessageAction": "update",
