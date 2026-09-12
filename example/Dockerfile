@@ -4,7 +4,7 @@
 FROM registry.gitlab.com/joern_schonhoff/dns-healthcheck:latest AS healthcheck
 
 # ── bind9 with embedded healthcheck ──────────────────────────────────────────
-FROM internetsystemsconsortium/bind9:9.20@sha256:8fdd4005c2af3afd3f528650da44fea9eb4365c15f49b2ede96a6fa2257079a1
+FROM internetsystemsconsortium/bind9:9.21@sha256:0410063274548dbba85093c1a05182a8c4b077417465492d0d35c008c60bb618
 
 COPY --from=healthcheck /dns-healthcheck /usr/bin/dns-healthcheck
 
