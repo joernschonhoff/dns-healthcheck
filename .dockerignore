@@ -1,0 +1,43 @@
+# Git
+.git
+.gitignore
+
+# CI/CD
+.gitlab-ci.yml
+.gitlab-ci-local
+
+# Documentation
+README.md
+LICENSE
+
+# Example files
+example
+
+# Dependencies (will be downloaded fresh in container)
+vendor
+
+# Local build artifacts
+dns-healthcheck
+dns-healthcheck-arm64
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Configuration
+renovate.json
+
+# Go build cache (rebuilds fresh in container)
+.go
+*.out
