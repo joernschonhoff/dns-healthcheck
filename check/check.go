@@ -20,12 +20,12 @@ type Result struct {
 }
 
 // Passed reports whether the check is considered healthy.
-// NOERROR and NXDOMAIN both pass; SERVFAIL and network errors fail.
+// NOERROR, NXDOMAIN, and REFUSED all pass; SERVFAIL and network errors fail.
 func (r Result) Passed() bool {
 	if r.Err != nil {
 		return false
 	}
-	return r.Rcode == dns.RcodeNoError || r.Rcode == dns.RcodeNXDomain
+	return r.Rcode == dns.RcodeNoError || r.Rcode == dns.RcodeNXDomain || r.Rcode == dns.RcodeRefused
 }
 
 // String returns the log line for this result, e.g.:
