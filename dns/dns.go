@@ -15,6 +15,7 @@ const (
 	RcodeNoError  = int(dnsmessage.RCodeSuccess)
 	RcodeServFail = int(dnsmessage.RCodeServerFailure)
 	RcodeNXDomain = int(dnsmessage.RCodeNameError)
+	RcodeRefused  = int(dnsmessage.RCodeRefused)
 )
 
 // BuildQuery encodes a DNS A-record query in wire format.
@@ -80,6 +81,8 @@ func RcodeName(rcode int) string {
 		return "SERVFAIL"
 	case RcodeNXDomain:
 		return "NXDOMAIN"
+	case RcodeRefused:
+		return "REFUSED"
 	default:
 		return dnsmessage.RCode(rcode).String()
 	}
