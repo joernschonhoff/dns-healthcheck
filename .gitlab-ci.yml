@@ -40,9 +40,9 @@ test:
 
 release:image:
   stage: release
-  image: docker:29.8.1@sha256:1f029db43a32fbb1465fe8ff4327d405154876946986170e97d7861232a8227a
+  image: docker:29.8.2@sha256:7dcdfc4a20246236f558175182ccace1eb15a41bd3eb119dd2284f393498b7c1
   services:
-    - docker:29.8.1-dind@sha256:1f029db43a32fbb1465fe8ff4327d405154876946986170e97d7861232a8227a
+    - docker:29.8.2-dind@sha256:7dcdfc4a20246236f558175182ccace1eb15a41bd3eb119dd2284f393498b7c1
   rules:
     - if: '$CI_COMMIT_TAG =~ /^v\d+\.\d+\.\d+$/'
   before_script:
