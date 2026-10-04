@@ -13,6 +13,11 @@
   "commitMessageExtra": "to {{newVersion}}",
   "packageRules": [
     {
+      "description": "Auto-merge minor/patch/pin updates once CI passes",
+      "matchUpdateTypes": ["minor", "patch", "pin"],
+      "automerge": true
+    },
+    {
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["digest"],
       "enabled": false
@@ -23,8 +28,7 @@
     "labels": [
       "security",
       "renovate"
-    ],
-    "assignees": []
+    ]
   },
   "postUpdateOptions": [
     "gomodTidy"
