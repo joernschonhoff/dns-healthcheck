@@ -1,3 +1,10 @@
+## [0.1.8](https://gitlab.com/joern_schonhoff/dns-healthcheck/compare/v0.1.7...v0.1.8) (2026-11-02)
+
+
+### Bug Fixes
+
+* **deps:** update module golang.org/x/net to v0.62.0 ([15e4f14](https://gitlab.com/joern_schonhoff/dns-healthcheck/commit/15e4f143383f1ecbddda130f1dad6d3c9df9c707))
+
 ## [0.1.7](https://gitlab.com/joern_schonhoff/dns-healthcheck/compare/v0.1.6...v0.1.7) (2026-10-26)
 
 ## [0.1.6](https://gitlab.com/joern_schonhoff/dns-healthcheck/compare/v0.1.5...v0.1.6) (2026-10-21)
