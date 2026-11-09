@@ -1,3 +1,5 @@
+## [0.1.9](https://gitlab.com/joern_schonhoff/dns-healthcheck/compare/v0.1.8...v0.1.9) (2026-11-09)
+
 ## [0.1.8](https://gitlab.com/joern_schonhoff/dns-healthcheck/compare/v0.1.7...v0.1.8) (2026-11-02)
 
 
